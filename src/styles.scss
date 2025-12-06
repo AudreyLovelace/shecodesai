@@ -1,0 +1,90 @@
+$dark-purple: #885df1;
+$light-purple: #f9f7fe;
+$black-border: solid 1px black;
+
+// * {
+//   border: $black-border;
+// }
+
+body {
+  background-color: $light-purple;
+  font-family: monospace;
+}
+.container {
+  max-width: 600px;
+  margin: 0 auto;
+}
+header {
+  display: flex;
+  flex-direction: row;
+  justify-content: space-between;
+  align-items: center;
+  margin: 30px 0;
+  width: 100%;
+  h1 {
+    font-size: 35px;
+    padding: 0;
+    letter-spacing: -2px;
+  }
+  img {
+    display: block;
+    height: 42px;
+    width: 150px;
+  }
+}
+main {
+  .search {
+    background-color: white;
+    border-radius: 10px;
+    padding: 20px;
+    form {
+      width: 100%;
+      display: grid;
+      grid-template-columns: 2fr 1fr;
+      grid-gap: 10px;
+      #topic {
+        border-radius: 50px;
+        border: 0.1px solid black;
+        padding: 15px;
+        font-size: 15px;
+      }
+      input[type="submit"] {
+        border-radius: 50px;
+        border: none;
+        background-color: $dark-purple;
+        color: white;
+      }
+      input[type="submit"]:hover {
+        cursor: pointer;
+      }
+    }
+    div {
+      margin-top: 10px;
+      letter-spacing: -0.5px;
+      color: grey;
+    }
+  }
+  .poem {
+    font-size: 15px;
+    margin-top: 30px;
+    background-color: white;
+    padding: 5px 20px;
+    border-left: 3px solid $dark-purple;
+    span {
+      p {
+        font-size: 15px;
+      }
+    }
+    strong {
+      color: $dark-purple;
+      margin-left: -2px;
+    }
+    // .Typewriter_cursor {
+    //   display: none;
+    // }
+  }
+}
+footer {
+  margin-top: 30px;
+  letter-spacing: -1px;
+}

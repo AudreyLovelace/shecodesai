@@ -10,7 +10,10 @@
   </head>
   <body>
     <div class="container">
-      <header><h1>Poem generator</h1></header>
+      <header>
+        <h1>Poem generator</h1>
+        <img src="src/shecodes.png" alt="shecodes logo" />
+      </header>
       <main>
         <div class="search">
           <form action="submit">
@@ -21,12 +24,19 @@
               placeholder="Enter the topic of the poem?"
               autocomplete="off"
               autofocus
+              required
             />
             <input type="submit" value="Generate Peom" />
           </form>
-          <p><small>i.e: Flower, Paris or Cheese</small></p>
+          <div><small>i.e: Flower, Paris or Cheese</small></div>
         </div>
-        <div class="poem"></div>
+        <div class="poem">
+          <p>SheCodes, a community strong and bright,</p>
+          <p>Women learning to code, taking flight,</p>
+          <p>With determination and support in sight,</p>
+          <p>Together we shine, in love for tech we unite.</p>
+          <p><strong>SheCodes AI</strong></p>
+        </div>
       </main>
       <footer>
         <p>
@@ -38,9 +48,13 @@
           >, and is open-sourced on
           <a href="https://github.com/AudreyLovelace/shecodesai" target="_blank"
             >Github</a
-          >. Hosted on Netlify
+          >. Hosted on
+          <a href="https://subtle-cajeta-735d15.netlify.app/" target="_blank"
+            >Netlify</a
+          >.
         </p>
       </footer>
     </div>
+    <script src="src/index.js"></script>
   </body>
 </html>
