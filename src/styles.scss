@@ -2,6 +2,15 @@ $dark-purple: #885df1;
 $light-purple: #f9f7fe;
 $black-border: solid 1px black;
 
+@keyframes blink {
+  50% {
+    opacity: 0;
+  }
+}
+
+.blink {
+  animation: blink 0.5s infinite;
+}
 // * {
 //   border: $black-border;
 // }
@@ -68,11 +77,14 @@ main {
     font-size: 15px;
     margin-top: 30px;
     background-color: white;
-    padding: 5px 20px;
+    padding: 20px;
     border-left: 3px solid $dark-purple;
     span {
       p {
         font-size: 15px;
+      }
+      p:first-child {
+        margin-top: 0;
       }
     }
     strong {

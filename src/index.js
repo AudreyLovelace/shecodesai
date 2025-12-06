@@ -1,10 +1,11 @@
 let form = document.querySelector("form");
 let poem = document.querySelector(".poem");
-let siganiture = "<p><strong>SheCodes AI</strong></p>";
+let siganiture = "<strong>SheCodes AI</strong>";
 
 function generatePoem(res) {
   console.log(res.data.answer);
   let poemContent = res.data.answer;
+  poem.firstChild.classList.remove("blink");
   new Typewriter(".poem", {
     strings: poemContent + siganiture,
     autoStart: true,
@@ -21,7 +22,8 @@ function submitForm(e) {
   let context = `You can generate a four line precise english poem with a key word i will give you in the prompt that can be easily red by none native speakers. Put each line in a HTML p element, for example:  <p>SheCodes, a community strong and bright,</p><p>Women learning to code, taking flight,</p><p>With determination and support in sight,</p><p>Together we shine, in love for tech we unite.</p>`;
   let url = `https://api.shecodes.io/ai/v1/generate?prompt=${prompt}&context=${context}&key=${key}`;
   console.log(url);
-  poem.innerHTML = "<p>Generating poem now......</p>";
+  poem.innerHTML = `<p>Generating a poem about ${prompt} now......</p>`;
+  poem.firstChild.classList.add("blink");
   axios.get(url).then(generatePoem);
 }
 

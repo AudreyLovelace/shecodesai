@@ -1,3 +1,12 @@
+@keyframes blink {
+  50% {
+    opacity: 0;
+  }
+}
+.blink {
+  animation: blink 0.5s infinite;
+}
+
 body {
   background-color: #f9f7fe;
   font-family: monospace;
@@ -62,11 +71,14 @@ main .poem {
   font-size: 15px;
   margin-top: 30px;
   background-color: white;
-  padding: 5px 20px;
+  padding: 20px;
   border-left: 3px solid #885df1;
 }
 main .poem span p {
   font-size: 15px;
+}
+main .poem span p:first-child {
+  margin-top: 0;
 }
 main .poem strong {
   color: #885df1;
