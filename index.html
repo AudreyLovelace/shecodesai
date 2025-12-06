@@ -5,12 +5,13 @@
     <meta name="viewport" content="width=device-width, initial-scale=1.0" />
     <script src="https://cdn.jsdelivr.net/npm/axios/dist/axios.min.js"></script>
     <script src="https://unpkg.com/typewriter-effect@latest/dist/core.js"></script>
+    <link rel="stylesheet" href="src/styles.css" />
     <title>Document</title>
   </head>
   <body>
     <div class="container">
       <header><h1>Poem generator</h1></header>
-      <section>
+      <main>
         <div class="search">
           <form action="submit">
             <input
@@ -18,12 +19,28 @@
               name="topic"
               id="topic"
               placeholder="Enter the topic of the poem?"
+              autocomplete="off"
+              autofocus
             />
             <input type="submit" value="Generate Peom" />
           </form>
           <p><small>i.e: Flower, Paris or Cheese</small></p>
         </div>
-      </section>
+        <div class="poem"></div>
+      </main>
+      <footer>
+        <p>
+          Coded with love by
+          <a
+            href="https://www.shecodes.io/graduates/29308-xiyue-sun"
+            target="_blank"
+            >Audrey</a
+          >, and is open-sourced on
+          <a href="https://github.com/AudreyLovelace/shecodesai" target="_blank"
+            >Github</a
+          >. Hosted on Netlify
+        </p>
+      </footer>
     </div>
   </body>
 </html>
